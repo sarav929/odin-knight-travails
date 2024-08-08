@@ -1,36 +1,11 @@
-def knight_moves
+require_relative 'lib/graph'
+require_relative 'lib/knight'
 
-end
+BOARD_SIZE = 8
 
-def filter_moves(moves)
-  filtered = []
-  moves.each_with_index do |move, index|
-    if moves[index][0] < 7 && moves[index][0] > 0 && moves[index][1] < 7 && moves[index][1] > 0
-      filtered << move    
-    end
-  end
-  filtered
-end
+p chessboard = Graph.new(BOARD_SIZE)
 
-def possible_moves(r, c)
-  filter_moves(moves = [
-    [r + 2, c + 1],
-    [r + 2, c - 1],
-    [r - 2, c + 1],
-    [r - 2, c - 1],
+knight = Knight.new
 
-    [r + 1, c + 2],
-    [r + 1, c - 2],
-    [r - 1, c + 2],
-    [r - 1, c - 2]
-  ])
-end
-
-
-# test
-
-moves = possible_moves(7,3)
-
-p moves
-
+p knight.possible_moves([3,3], chessboard.size) 
 

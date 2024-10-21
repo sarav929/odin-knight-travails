@@ -1,3 +1,5 @@
+## Knight Travails
+
 Project created to practice graphs and search algorithms (DFS & BFS) as part of the Odin Project. 
 
 The assignment was to build a function to find the shortest path for a knight piece on the chessboard to go from a cell to another. The start and destination coordinates are taken as arguments in knight_moves and the shortest path is printed out in the command line with print_path. 
